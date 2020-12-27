@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+
+<svg width="860" height="400" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <style type="text/css">
+        @keyframes fadeVar-a {
+            from { fill: var(--fill-from-a); }
+            to { fill: var(--fill-to-a); }
+        }
+
+        @keyframes fadeVar-b {
+            from { fill: var(--fill-from-b); }
+            to { fill: var(--fill-to-b); }
+        }
+
+        .left {
+            --fill-from-a: #000000;
+            --fill-to-a: #FFFFFF;
+            --fill-from-b: #FFFFFF;
+            --fill-to-b: #FFFFFF;
+        }
+
+        .right {
+            --fill-from-a: #FFFFFF;
+            --fill-to-a: #FFFFFF;
+            --fill-from-b: #000000;
+            --fill-to-b: #FFFFFF;
+        }
+
+        .segment-ab { 
+            animation: 3s fadeVar-a infinite; 
+        }
+
+        .segment-bc { 
+            animation: 3s fadeVar-b infinite; 
+        }
+    </style>
+    <defs>
+        <g id="venn">
+            <rect x="10" y="10" width="400" height="380" fill="#FFFFFF" stroke="#000000" stroke-width="3px" />
+            <g id="segments" fill="#FFFFFF">
+                <path id="a" d="M 110.71796769724492 241.96152422706632
+                            A 100 100 0 0 0 210 230
+                            A 100 100 0 0 0 309.28203230275506 241.96152422706632
+                            A 100 100 0 1 1 110.71796769724492 241.96152422706632"
+                            class="segment-a">
+                </path>
+                <path id="b" d="M 309.28203230275506 241.96152422706632
+                            A 100 100 0 0 0 249.28203230275508 161.96152422706632
+                            A 100 100 0 0 0 210 70
+                            A 100 100 0 1 1 309.28203230275506 241.96152422706632"
+                            class="segment-b">
+                </path>
+                <path id="c" d="M 210 70
+                            A 100 100 0 0 0 170.71796769724492 161.96152422706632
+                            A 100 100 0 0 0 110.71796769724492 241.96152422706632
+                            A 100 100 0 1 1 210 70"
+                            class="segment-c">
+                </path>
+                <path id="ab" d="M 210 70
+                            A 100 100 0 0 1 249.28203230275508 161.96152422706632
+                            A 100 100 0 0 0 170.71796769724492 161.96152422706632
+                            A 100 100 0 0 1 210 70"
+                            class="segment-ab">
+                    <!-- <animate id="a1" attributeName="fill" from="#FFFFFF" to="#000000" dur="3s" fill="freeze" repeatCount="indefinite" /> -->
+                    <!-- begin="a1.end" -->
+                </path>
+                <path id="bc" d="M 309.28203230275506 241.96152422706632
+                            A 100 100 0 0 1 210 230
+                            A 100 100 0 0 0 249.28203230275508 161.96152422706632
+                            A 100 100 0 0 1 309.28203230275506 241.96152422706632"
+                            class="segment-bc">
+                </path>
+                <path id="ac" d="M 110.71796769724492 241.96152422706632
+                            A 100 100 0 0 1 170.71796769724492 161.96152422706632
+                            A 100 100 0 0 0 210 230
+                            A 100 100 0 0 1 110.71796769724492 241.96152422706632"
+                            class="segment-ac">
+                </path>
+                <path id="abc" d="M 249.28203230275508 161.96152422706632
+                            A 100 100 0 0 1 210 230
+                            A 100 100 0 0 1 170.71796769724492 161.96152422706632
+                            A 100 100 0 0 1 249.28203230275508 161.96152422706632"
+                            class="segment-abc" fill="#000000">
+                </path>
+            </g>
+
+            <g id="circles" fill="none" stroke="#000000" stroke-width="3px">
+                <circle cx="150" cy="150" r="100" />
+                <circle cx="270" cy="150" r="100" />
+                <circle cx="210" cy="253.92304845413264" r="100" />
+            </g>
+
+            <g id="labels" text-anchor="middle">
+                <text x="390" y="30">U</text>
+                <!-- <text x="100" y="100">$A$</text> -->
+                <text x="320" y="100">B</text>
+                <text x="210" y="330">C</text>
+                <foreignObject x="100" y="100" width="100" height="100">
+                    \(A\)
+                </foreignObject>
+            </g>
+        </g>
+    </defs>
+    
+    <use href="#venn" class="left" transform="translate(0, 0)" />
+    <use href="#venn" class="right" transform="translate(440, 0)" />
+</svg>
+<!-- source: https://medium.com/@cmmyers/how-i-made-an-interactive-venn-diagram-with-d3-fa723c55a148 -->
