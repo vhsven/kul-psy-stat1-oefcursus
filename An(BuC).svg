@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+
+<svg width="420" height="400" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+        <g id="venn">
+            <rect x="10" y="10" width="400" height="380" fill="#FFFFFF" stroke="#000000" stroke-width="3px" />
+            <g id="segments" fill="#444444">
+                <path id="a" d="M 210 70
+                            A 100 100 0 0 0 170.71796769724492 161.96152422706632
+                            A 100 100 0 0 0 110.71796769724492 241.96152422706632
+                            A 100 100 0 1 1 210 70"
+                            class="segment-a">
+                </path>
+                <path id="b" d="M 309.28203230275506 241.96152422706632
+                            A 100 100 0 0 0 249.28203230275508 161.96152422706632
+                            A 100 100 0 0 0 210 70
+                            A 100 100 0 1 1 309.28203230275506 241.96152422706632"
+                            class="segment-b">
+                </path>
+                <path id="c" d="M 110.71796769724492 241.96152422706632
+                            A 100 100 0 0 0 210 230
+                            A 100 100 0 0 0 309.28203230275506 241.96152422706632
+                            A 100 100 0 1 1 110.71796769724492 241.96152422706632"
+                            class="segment-c">
+                </path>
+                <path id="ab" d="M 210 70
+                            A 100 100 0 0 1 249.28203230275508 161.96152422706632
+                            A 100 100 0 0 0 170.71796769724492 161.96152422706632
+                            A 100 100 0 0 1 210 70"
+                            class="segment-ab">
+                </path>
+                <path id="bc" d="M 309.28203230275506 241.96152422706632
+                            A 100 100 0 0 1 210 230
+                            A 100 100 0 0 0 249.28203230275508 161.96152422706632
+                            A 100 100 0 0 1 309.28203230275506 241.96152422706632"
+                            class="segment-bc">
+                </path>
+                <path id="ac" d="M 110.71796769724492 241.96152422706632
+                            A 100 100 0 0 1 170.71796769724492 161.96152422706632
+                            A 100 100 0 0 0 210 230
+                            A 100 100 0 0 1 110.71796769724492 241.96152422706632"
+                            class="segment-ac">
+                </path>
+                <path id="abc" d="M 249.28203230275508 161.96152422706632
+                            A 100 100 0 0 1 210 230
+                            A 100 100 0 0 1 170.71796769724492 161.96152422706632
+                            A 100 100 0 0 1 249.28203230275508 161.96152422706632"
+                            class="segment-abc">
+                </path>
+            </g>
+
+            <g id="circles" fill="none" stroke="#000000" stroke-width="3px">
+                <circle cx="150" cy="150" r="100" />
+                <circle cx="270" cy="150" r="100" />
+                <circle cx="210" cy="253.92304845413264" r="100" />
+            </g>
+
+            <g id="labels" text-anchor="middle">
+                <text x="50" y="50">A</text>
+                <text x="370" y="50">B</text>
+                <text x="210" y="380">C</text>
+                <text x="395" y="380">U</text>
+            </g>
+        </g>
+    </defs>
+    
+    <use href="#venn" class="left" transform="translate(0, 0)" />
+    <animate href="#a" attributeName="fill" from="#FFFFFF" to="#FFFFFF" dur="3s" fill="freeze" repeatCount="indefinite" />
+    <animate href="#b" attributeName="fill" from="#444444" to="#FFFFFF" dur="3s" fill="freeze" repeatCount="indefinite" />
+    <animate href="#c" attributeName="fill" from="#444444" to="#FFFFFF" dur="3s" fill="freeze" repeatCount="indefinite" />
+    <animate href="#bc" attributeName="fill" from="#444444" to="#FFFFFF" dur="3s" fill="freeze" repeatCount="indefinite" />
+</svg>
+<!-- source: https://medium.com/@cmmyers/how-i-made-an-interactive-venn-diagram-with-d3-fa723c55a148 -->

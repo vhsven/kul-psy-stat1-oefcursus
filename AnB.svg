@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+
+<svg width="420" height="400" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+        <g id="venn">
+            <rect x="10" y="10" width="400" height="380" fill="#FFFFFF" stroke="#000000" stroke-width="3px" />
+            <g id="segments" fill="#FFFFFF">
+                <path id="a" d="M 210 120
+                            A 100 100 0 0 0 210 280
+                            A 100 100 0 1 1 210 120"
+                            class="segment-a">
+                </path>
+                <path id="b" d="M 210 280
+                            A 100 100 0 0 0 210 120
+                            A 100 100 0 1 1 210 280"
+                            class="segment-b">
+                </path>
+                <path id="ab" d="M 210 120
+                            A 100 100 0 0 0 210 280
+                            A 100 100 0 0 0 210 120"
+                            class="segment-ab">
+                </path>
+            </g>
+
+            <g id="circles" fill="none" stroke="#000000" stroke-width="3px">
+                <circle cx="150" cy="200" r="100" />
+                <circle cx="270" cy="200" r="100" />
+            </g>
+
+            <g id="labels" text-anchor="middle">
+                <text x="50" y="100">A</text>
+                <text x="370" y="100">B</text>
+                <text x="395" y="380">U</text>
+            </g>
+        </g>
+    </defs>
+    
+    <use href="#venn" class="left" transform="translate(0, 0)" />
+    <animate href="#a" attributeName="fill" from="#444444" to="#FFFFFF" dur="3s" fill="freeze" repeatCount="indefinite" />
+    <animate href="#ab" attributeName="fill" from="#444444" to="#444444" dur="3s" fill="freeze" repeatCount="indefinite" />
+</svg>
+<!-- source: https://medium.com/@cmmyers/how-i-made-an-interactive-venn-diagram-with-d3-fa723c55a148 -->

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+
+<svg width="420" height="400" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+        <g id="venn">
+            <rect id="u" x="10" y="10" width="400" height="380" fill="#FFFFFF" stroke="#000000" stroke-width="3px" />
+            <g id="circles" fill="none" stroke="#000000" stroke-width="3px">
+                <circle id="a" cx="210" cy="200" r="100" />
+            </g>
+
+            <g id="labels" text-anchor="middle">
+                <text x="120" y="120">A</text>
+                <text x="395" y="380">U</text>
+            </g>
+        </g>
+    </defs>
+    
+    <use href="#venn" class="left" transform="translate(0, 0)" />
+    <animate href="#a" attributeName="fill" dur="3s" fill="freeze" repeatCount="indefinite" values="#444444; #FFFFFF; #444444" />
+    <animate href="#u" attributeName="fill" dur="3s" fill="freeze" repeatCount="indefinite" values="#FFFFFF; #444444; #FFFFFF" />
+</svg>
+<!-- source: https://medium.com/@cmmyers/how-i-made-an-interactive-venn-diagram-with-d3-fa723c55a148 -->
